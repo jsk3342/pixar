@@ -1,0 +1,186 @@
+/* reset */
+body, h1, h2, ul, p, button{
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2{
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button, a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* layout */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.button {
+  padding: 20px;
+}
+
+.button:focus {
+  background-color: black;
+}
+
+/* design */
+body {
+  background-color: rgb(17, 17, 17);
+}
+
+/* header */
+.header {
+  min-height: 150px;
+  background-color: rgb(178, 201, 222);
+}
+
+.header-title {
+  font-size: 3rem;
+  color: #fff;
+  padding: 10px 0;
+  letter-spacing: 1em;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* main */
+.main {
+  color: #fff;
+  padding: 20px 0;  
+  background-color: rgb(51, 51, 51);
+}
+
+.movie {
+  margin-top: -78px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.movie::before {
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  width: 355px;
+  top: -95px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  background-image: url(./images/up.png);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* 인라인 블럭 사이 간격 제거 방법이 플로트나 플렉스가 답이였나요?ㅠㅠ */
+.movie-nav {
+  display: flex;  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+/* grid */
+.grid {
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid-items .card {
+  width: 208px;
+  background-color: black;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.grid-items .card-cover {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.grid-items .card-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-items .card-inside-wrap {
+  padding: 15px;
+}
+
+.grid-items .card-title {
+  color: rgb(119, 169, 255);
+  padding: 0 0 15px;
+  font-size: 20px;
+}
+
+.grid-items .card-detail {
+  color: #999;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.grid-items .card-detail::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #999;
+  height: 1px;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+}
+
+.grid-items .card-icon-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-items .card-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;  
+}
+
+.grid-items .card-icon.link {
+  background-position: 0 50px;
+  background-image: url(./images/sprite-btn.png);
+}
+
+.grid-items .card-icon.like {
+  background-position: -50px 50px;
+  background-image: url(./images/sprite-btn.png);
+}
+
+.grid-items .card-icon.share {
+  background-position: -100px 50px;
+  background-image: url(./images/sprite-btn.png);
+}
+
+.footer {
+  color: #999;
+  padding: 30px 80px;
+}
